@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Внутриколледжный чемпионат ВСК</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-circle"></div>
+                <span class="college-name" data-translate="collegeName">КОЛЛЕДЖ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ</span>
+            </div>
+            <nav class="nav-buttons">
+                <a href="stages.html" class="nav-btn" data-translate="stagesBtn">Этапы</a>
+                <a href="winners.html" class="nav-btn" data-translate="winnersBtn">Итоги</a>
+            </nav>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <span class="lang-separator">|</span>
+                <button class="lang-btn" data-lang="kz">ҚАЗ</button>
+                <span class="lang-separator">|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Background Slider -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="public/modern-technology-classroom-students.jpg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="public/programming-competition-workspace.jpg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="public/students-working-computers-lab.jpg" alt="Slide 3">
+                </div>
+                <div class="slide">
+                    <img src="public/technology-innovation-digital.png" alt="Slide 4">
+                </div>
+                <div class="slide">
+                    <img src="public/web-development-coding-screen.png" alt="Slide 5">
+                </div>
+            </div>
+            <div class="slider-overlay"></div>
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="content-overlay">
+            <div class="title-section">
+                <h1 class="main-title" data-translate="mainTitle">«Внутриколледжный чемпионат ВСК»</h1>
+                <p class="subtitle" data-translate="subtitle">«Покажи свои знания и умения!»</p>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form-container">
+                <form id="registrationForm" class="registration-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            class="form-input" 
+                            required
+                        >
+                        <label for="fullName" class="form-label" data-translate="fullNameLabel">Фамилия, имя, отчество.</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="group" 
+                            name="group" 
+                            class="form-input" 
+                            required
+                        >
+                        <label for="group" class="form-label" data-translate="groupLabel">Группа.</label>
+                    </div>
+
+                    <div class="form-group">
+                        <select 
+                            id="specialty" 
+                            name="specialty" 
+                            class="form-input form-select" 
+                            required
+                        >
+                            <option value="" disabled selected></option>
+                            <option value="web-dev" data-translate-option="webDev">Веб-разработка</option>
+                            <option value="programming" data-translate-option="programming">Программирование</option>
+                            <option value="design" data-translate-option="design">Дизайн</option>
+                            <option value="network" data-translate-option="network">Сетевые технологии</option>
+                        </select>
+                        <label for="specialty" class="form-label" data-translate="specialtyLabel">Специальность</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            class="form-input" 
+                            required
+                        >
+                        <label for="phone" class="form-label" data-translate="phoneLabel">Контактный телефон (WhatsApp)</label>
+                    </div>
+
+                    <!-- Changed competency from text input to select dropdown -->
+                    <div class="form-group">
+                        <select 
+                            id="competency" 
+                            name="competency" 
+                            class="form-input form-select" 
+                            required
+                        >
+                            <option value="" disabled selected></option>
+                            <option value="web-dev" data-translate-option="webDev">Веб-разработка</option>
+                            <option value="programming" data-translate-option="programming">Программирование</option>
+                            <option value="design" data-translate-option="design">Дизайн</option>
+                            <option value="network" data-translate-option="network">Сетевые технологии</option>
+                        </select>
+                        <label for="competency" class="form-label" data-translate="competencyLabel">Компетенция.</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn" data-translate="submitBtn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Running Text -->
+    <div class="running-text-container">
+        <div class="running-text">
+            <span data-translate="runningText">Регистрация до 15 февраля | Конкурс 20–24 февраля | Итоги 25 февраля | Победителей ждут призы!</span>
+            <span data-translate="runningText">Регистрация до 15 февраля | Конкурс 20–24 февраля | Итоги 25 февраля | Победителей ждут призы!</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p data-translate="copyright">© Колледж информационных технологий, 2025</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
